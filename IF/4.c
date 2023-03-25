@@ -2,15 +2,10 @@
 
 int main()
 {
-	int a;
-	scanf_s("%d", &a);
-	if (a % 4 == 0)
-	{
-		if (a % 100 != 0 || a % 400 == 0)
-			printf("1");
-		else
-			printf("0");
-	}
-	else
-		printf("0");
+	int a, b;
+	scanf_s("%d %d", &a, &b);
+	if (a > 0 && b > 0) printf("1");
+	else if (a < 0 && b>0) printf("2");
+	else if (a < 0 && b < 0) printf("3");
+	else if (a > 0 && b < 0) printf("4");
 }
